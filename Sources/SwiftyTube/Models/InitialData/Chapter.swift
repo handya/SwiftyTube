@@ -8,8 +8,18 @@
 import Foundation
 
 public struct Chapter: Decodable {
-    let title: SimpleText
-    let timeRangeStartMillis: Int
-    var timeRangeEndMillis: Int?
-    let thumbnail: Thumbnail?
+    public let title: SimpleText
+    public let timeRangeStartMillis: Int
+    public var timeRangeEndMillis: Int?
+    public let thumbnail: Thumbnail?
+
+    public init(title: SimpleText,
+                timeRangeStartMillis: Int,
+                timeRangeEndMillis: Int? = nil,
+                thumbnail: Thumbnail? = nil) {
+        self.title = title
+        self.timeRangeStartMillis = timeRangeStartMillis
+        self.timeRangeEndMillis = timeRangeEndMillis
+        self.thumbnail = thumbnail
+    }
 }

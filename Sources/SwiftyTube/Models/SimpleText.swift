@@ -7,9 +7,15 @@
 
 import Foundation
 
-public struct SimpleText: Decodable {
-    let text: String
+public struct SimpleText {
+    public let text: String
 
+    public init(text: String) {
+        self.text = text
+    }
+}
+
+extension SimpleText: Decodable {
     private enum CodingKeys: String, CodingKey {
         case simpleText
         case runs
@@ -36,4 +42,3 @@ public struct SimpleText: Decodable {
         }
     }
 }
-
