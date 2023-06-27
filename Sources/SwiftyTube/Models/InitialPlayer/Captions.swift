@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct PlayerCaptions: Decodable {
+public struct PlayerCaptions: Codable {
     let playerCaptionsTracklistRenderer: CaptionTrackList
 }

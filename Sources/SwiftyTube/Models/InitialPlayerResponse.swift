@@ -18,9 +18,9 @@ public extension InitialPlayerResponse {
     }
 }
 
-// MARK: - Decodable
+// MARK: - Codable
 
-extension InitialPlayerResponse: Decodable {
+extension InitialPlayerResponse: Codable {
     private enum CodingKeys: String, CodingKey {
         case videoDetails
         case playerCaptions = "captions"

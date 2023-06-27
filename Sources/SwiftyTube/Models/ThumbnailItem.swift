@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ThumbnailItem: Decodable {
+public struct ThumbnailItem: Codable {
     public let url: String?
     public let width: Int?
     public let height: Int?

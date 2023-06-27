@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct Thumbnail: Decodable {
+public struct Thumbnail: Codable {
     public let thumbnails: [ThumbnailItem]?
 }

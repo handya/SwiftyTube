@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct CaptionTrackList: Decodable {
+public struct CaptionTrackList: Codable {
     let captionTracks: [Caption]
 }

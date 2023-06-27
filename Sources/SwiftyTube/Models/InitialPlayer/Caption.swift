@@ -16,9 +16,9 @@ public struct Caption {
     public let expires: Date?
 }
 
-// MARK: - Decodable
+// MARK: - Codable
 
-extension Caption: Decodable {
+extension Caption: Codable {
     private enum CodingKeys: String, CodingKey {
         case baseUrl
         case languageCode
@@ -37,6 +37,8 @@ extension Caption: Decodable {
         self.languageCode = try container.decode(String.self, forKey: .languageCode)
         self.isTranslatable = try container.decodeIfPresent(Bool.self, forKey: .isTranslatable)
         if let name = try? container.decode(SimpleText.self, forKey: .name).text {
+            self.name = name
+        } else if let name = try? container.decode(String.self, forKey: .name) {
             self.name = name
         } else {
             self.name = self.languageCode

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct VideoDetails: Decodable {
+public struct VideoDetails: Codable {
     public let videoId: String?
     public let title: String?
     public let lengthSeconds: String?
