@@ -13,7 +13,7 @@ public enum CaptionKind: String {
 }
 
 extension CaptionKind: Codable {
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let raw = try container.decode(String.self)
         self = CaptionKind(rawValue: raw) ?? .unknown
