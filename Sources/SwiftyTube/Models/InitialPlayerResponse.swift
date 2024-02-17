@@ -1,8 +1,9 @@
 //
-//  File.swift
-//  
+//  InitialPlayerResponse.swift
+//
 //
 //  Created by Andrew Farquharson on 18/06/23.
+//  Copyright © 2023 Digital Tools Ltd. All rights reserved.
 //
 
 import Foundation
@@ -11,6 +12,8 @@ public struct InitialPlayerResponse {
     public let videoDetails: VideoDetails?
     public let playerCaptions: PlayerCaptions?
 }
+
+// MARK: - Computed
 
 public extension InitialPlayerResponse {
     var captions: [Caption]? {

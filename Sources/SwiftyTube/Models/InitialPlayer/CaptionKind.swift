@@ -3,6 +3,7 @@
 //  
 //
 //  Created by Andrew Farquharson on 18/06/23.
+//  Copyright © 2023 Digital Tools Ltd. All rights reserved.
 //
 
 import Foundation
@@ -21,6 +22,8 @@ public enum CaptionKind: String {
 
     case unknown
 }
+
+// MARK: - Codable
 
 extension CaptionKind: Codable {
     public init(from decoder: Decoder) throws {
