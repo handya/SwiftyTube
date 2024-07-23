@@ -11,6 +11,7 @@ import Foundation
 public struct InitialPlayerResponse {
     public let videoDetails: VideoDetails?
     public let playerCaptions: PlayerCaptions?
+    public let playabilityStatus: PlayabilityStatus?
 }
 
 // MARK: - Computed
@@ -27,6 +28,7 @@ extension InitialPlayerResponse: Codable {
     private enum CodingKeys: String, CodingKey {
         case videoDetails
         case playerCaptions = "captions"
+        case playabilityStatus
     }
 
     public init(from string: String) throws {

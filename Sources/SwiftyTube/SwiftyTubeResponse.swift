@@ -10,7 +10,7 @@ import Foundation
 
 public struct SwiftyTubeResponse {
     public let initialPlayerResponse: InitialPlayerResponse
-    public let initialData: InitialData
+    public let initialData: VideoInitialData
 
     public init(page: String) throws {
         self.initialPlayerResponse = try .init(from: page)

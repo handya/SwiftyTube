@@ -17,6 +17,10 @@ let package = Package(
         .testTarget(
             name: "SwiftyTubeTests",
             dependencies: ["SwiftyTube"],
-            resources: [.copy("Resources/mock_data.html")]),
+            resources: [
+                .copy("Resources/mock_data.html"),
+                .copy("Resources/channel_mock_data.html"),
+                .copy("Resources/age_restricted.html")
+            ]),
     ]
 )

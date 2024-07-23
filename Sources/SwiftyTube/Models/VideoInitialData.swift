@@ -1,5 +1,5 @@
 //
-//  InitialData.swift
+//  VideoInitialData.swift
 //  
 //
 //  Created by Andrew Farquharson on 18/06/23.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-public struct InitialData {
+public struct VideoInitialData {
     let playerOverlays: PlayerOverlays?
 }
 
 // MARK: - Decodable
 
-extension InitialData: Decodable {
+extension VideoInitialData: Decodable {
     public init(from string: String) throws {
         // Original '(?:window\s*\[\s*["\']ytInitialData["\']\s*\]|ytInitialData)\s*=\s*({.+?})\s*;'
         let pattern =  #"ytInitialData\s*=\s*(\{.*?\});"#
@@ -30,13 +30,13 @@ extension InitialData: Decodable {
             throw SwiftyTubeError.initialDataResponseInvalidJson
         }
 
-        self = try JSONDecoder().decode(InitialData.self, from: jsonData)
+        self = try JSONDecoder().decode(VideoInitialData.self, from: jsonData)
     }
 }
 
 // MARK: - Computed
 
-public extension InitialData {
+public extension VideoInitialData {
     var chapters: [Chapter]? {
         return playerOverlays?
             .playerOverlayRenderer?
