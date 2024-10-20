@@ -20,6 +20,10 @@ public enum CaptionFormat: String {
 
 extension CaptionFormat: Codable { }
 
+// MARK: - CaseIterable
+
+extension CaptionFormat: CaseIterable { }
+
 // MARK: - Computed
 
 public extension CaptionFormat {
