@@ -38,7 +38,7 @@ public extension CaptionFormat {
         case .srv2:
             return "Structured Real-time Voice 2"
         case .srv1:
-            return "Structured Real-time Voice `"
+            return "Structured Real-time Voice 1"
         case .json3:
             return "JSON"
         }
